@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'madameViviane';
+    src: url("fonts/mv.ttf");
+}
+
+h1
+{
+    font-family: 'madameViviane', Arial, sans-serif;
+    font-size: 10em;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+p:nth-child(1)
+{
+    flex: 3;
+}
+
+p:nth-child(2)
+{
+    flex: 2;
+}
+
+p
+{
+    background-color: blue;
+    font-family: 'madameViviane', Arial, sans-serif;
+    font-size: 2em;
+    text-align: center;
+    margin: 1px;
+}
+
+.intro
+{
+    color: pink;
+}
+figcaption
+{
+    text-align: center;
+    font-family: 'madameViviane';
+    font-size: 2em;
+    color: brown;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div {
+    font-size: 100px;
+    opacity: 0.4;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px solid;
+}
+
+@media all and (max-width: 1000px)
+{
+    div {
+        font-size: 20px;
+    }
+}
+
+#monid {
+    width: 3000px;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: blueviolet;
+    align-items: center;
+    align-content: center;
+}
+
+#div1
+{
+    display: flex;
+}
+
+.secret {
+    display:none;
+}
+
+input, label {
+    height: 150px;
+}
+
+label {
+    font-size: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+form {
+    display:flex;
+    align-items: center;
+}
+
+#div2 {
+    position: relative;
+}
+td {
+    border: 5px solid pink;
+}
+table {
+    border-collapse: collapse;
+}
