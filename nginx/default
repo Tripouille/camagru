@@ -1,4 +1,8 @@
   
+upstream app_server {
+    server unix:/.unicorn.sock fail_timeout=0;
+}
+
 server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
@@ -31,4 +35,15 @@ server {
 		fastcgi_index     index.php;
 		include           fastcgi.conf;
 	}
+
+	location @app {
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+		proxy_set_header Host $http_host;
+
+		proxy_redirect off;
+
+		# proxy_pass PI-LINK-0eacd313867281a74afda970453019e5d2a32061;
+		proxy_pass http://app_server;
+    }
 }

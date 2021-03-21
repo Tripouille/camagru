@@ -1,0 +1,69 @@
+I, [2021-03-21T14:50:29.532473 #659]  INFO -- : Refreshing Gem list
+/usr/bin/unicorn_rails must be run inside RAILS_ROOT: #<LoadError: cannot load such file -- /usr/share/webapps/site/config/boot>
+I, [2021-03-21T14:52:56.969371 #668]  INFO -- : Refreshing Gem list
+config.ru:2:in `block in <main>': undefined method `port' for #<Rack::Builder:0x00007fa68fca9af8> (NoMethodError)
+	from /usr/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:125:in `instance_eval'
+	from /usr/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:125:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /usr/lib/ruby/gems/2.7.0/gems/unicorn-6.0.0/lib/unicorn.rb:54:in `eval'
+	from /usr/lib/ruby/gems/2.7.0/gems/unicorn-6.0.0/lib/unicorn.rb:54:in `block in builder'
+	from /usr/lib/ruby/gems/2.7.0/gems/unicorn-6.0.0/lib/unicorn/http_server.rb:826:in `build_app!'
+	from /usr/lib/ruby/gems/2.7.0/gems/unicorn-6.0.0/lib/unicorn/http_server.rb:140:in `start'
+	from /usr/lib/ruby/gems/2.7.0/gems/unicorn-6.0.0/bin/unicorn:128:in `<top (required)>'
+	from /usr/bin/unicorn:23:in `load'
+	from /usr/bin/unicorn:23:in `<main>'
+I, [2021-03-21T14:53:23.282646 #673]  INFO -- : Refreshing Gem list
+config.ru:2:in `block in <main>': undefined method `port' for #<Rack::Builder:0x00007f53d7d35428> (NoMethodError)
+	from /usr/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:125:in `instance_eval'
+	from /usr/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:125:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /usr/lib/ruby/gems/2.7.0/gems/unicorn-6.0.0/lib/unicorn.rb:54:in `eval'
+	from /usr/lib/ruby/gems/2.7.0/gems/unicorn-6.0.0/lib/unicorn.rb:54:in `block in builder'
+	from /usr/lib/ruby/gems/2.7.0/gems/unicorn-6.0.0/lib/unicorn/http_server.rb:826:in `build_app!'
+	from /usr/lib/ruby/gems/2.7.0/gems/unicorn-6.0.0/lib/unicorn/http_server.rb:140:in `start'
+	from /usr/lib/ruby/gems/2.7.0/gems/unicorn-6.0.0/bin/unicorn:128:in `<top (required)>'
+	from /usr/bin/unicorn:23:in `load'
+	from /usr/bin/unicorn:23:in `<main>'
+I, [2021-03-21T15:02:17.852998 #677]  INFO -- : Refreshing Gem list
+I, [2021-03-21T15:02:17.858459 #677]  INFO -- : listening on addr=/.unicorn.sock fd=8
+I, [2021-03-21T15:02:17.858937 #677]  INFO -- : listening on addr=0.0.0.0:8080 fd=9
+I, [2021-03-21T15:02:17.860338 #678]  INFO -- : worker=0 ready
+I, [2021-03-21T15:02:17.861254 #679]  INFO -- : worker=1 ready
+I, [2021-03-21T15:02:17.862006 #680]  INFO -- : worker=2 ready
+I, [2021-03-21T15:02:17.862060 #677]  INFO -- : master process ready
+I, [2021-03-21T15:02:17.862736 #681]  INFO -- : worker=3 ready
+I, [2021-03-21T15:43:17.859332 #677]  INFO -- : reaped #<Process::Status: pid 678 exit 0> worker=0
+I, [2021-03-21T15:43:17.859798 #677]  INFO -- : reaped #<Process::Status: pid 679 exit 0> worker=1
+I, [2021-03-21T15:43:17.860227 #677]  INFO -- : reaped #<Process::Status: pid 680 exit 0> worker=2
+I, [2021-03-21T15:43:17.860754 #677]  INFO -- : reaped #<Process::Status: pid 681 exit 0> worker=3
+I, [2021-03-21T15:43:17.861143 #677]  INFO -- : master complete
+I, [2021-03-21T15:44:02.560044 #1164]  INFO -- : Refreshing Gem list
+I, [2021-03-21T15:44:02.563087 #1164]  INFO -- : unlinking existing socket=/.unicorn.sock
+I, [2021-03-21T15:44:02.563424 #1164]  INFO -- : listening on addr=/.unicorn.sock fd=7
+I, [2021-03-21T15:44:02.563674 #1164]  INFO -- : listening on addr=0.0.0.0:8080 fd=8
+I, [2021-03-21T15:44:02.564729 #1165]  INFO -- : worker=0 ready
+I, [2021-03-21T15:44:02.565400 #1166]  INFO -- : worker=1 ready
+I, [2021-03-21T15:44:02.565980 #1164]  INFO -- : master process ready
+I, [2021-03-21T15:44:02.566333 #1168]  INFO -- : worker=3 ready
+I, [2021-03-21T15:44:02.566730 #1167]  INFO -- : worker=2 ready
+I, [2021-03-21T15:44:05.716224 #1164]  INFO -- : reaped #<Process::Status: pid 1165 exit 0> worker=0
+I, [2021-03-21T15:44:05.716813 #1164]  INFO -- : reaped #<Process::Status: pid 1166 exit 0> worker=1
+I, [2021-03-21T15:44:05.717395 #1164]  INFO -- : reaped #<Process::Status: pid 1167 exit 0> worker=2
+I, [2021-03-21T15:44:05.717894 #1164]  INFO -- : reaped #<Process::Status: pid 1168 exit 0> worker=3
+I, [2021-03-21T15:44:05.719017 #1164]  INFO -- : master complete
+I, [2021-03-21T15:44:09.669687 #1169]  INFO -- : Refreshing Gem list
+I, [2021-03-21T15:44:09.672891 #1169]  INFO -- : unlinking existing socket=/.unicorn.sock
+I, [2021-03-21T15:44:09.673261 #1169]  INFO -- : listening on addr=/.unicorn.sock fd=7
+I, [2021-03-21T15:44:09.673623 #1169]  INFO -- : listening on addr=0.0.0.0:8080 fd=8
+I, [2021-03-21T15:44:09.674706 #1170]  INFO -- : worker=0 ready
+I, [2021-03-21T15:44:09.675093 #1171]  INFO -- : worker=1 ready
+I, [2021-03-21T15:44:09.675528 #1172]  INFO -- : worker=2 ready
+I, [2021-03-21T15:44:09.675593 #1169]  INFO -- : master process ready
+I, [2021-03-21T15:44:09.676249 #1173]  INFO -- : worker=3 ready
+I, [2021-03-21T15:44:23.417999 #1169]  INFO -- : reaped #<Process::Status: pid 1170 exit 0> worker=0
+I, [2021-03-21T15:44:23.418633 #1169]  INFO -- : reaped #<Process::Status: pid 1171 exit 0> worker=1
+I, [2021-03-21T15:44:23.419219 #1169]  INFO -- : reaped #<Process::Status: pid 1172 exit 0> worker=2
+I, [2021-03-21T15:44:23.419683 #1169]  INFO -- : reaped #<Process::Status: pid 1173 exit 0> worker=3
+I, [2021-03-21T15:44:23.420181 #1169]  INFO -- : master complete
