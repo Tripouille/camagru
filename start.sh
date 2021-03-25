@@ -1,4 +1,6 @@
-/usr/bin/mysql_install_db --user=mysql && /etc/init.d/mariadb setup
+#!/bin/sh
+/usr/bin/mysql_install_db --user=mysql
+/etc/init.d/mariadb setup
 rc-update add mariadb
 rc-update add nginx
 rc-update add php-fpm7

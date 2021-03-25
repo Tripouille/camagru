@@ -1,3 +1,3 @@
 #!/bin/sh
-docker build -t camagru_image .
-docker run -v /Users/aalleman/camagru/site:/usr/share/webapps/site -d --name camagru_container -p 80:80 -p 443:443 camagru_image
+docker build -t ci .
+docker run -v C:\Users\jean-\Documents\42\camagru\site:/usr/share/webapps/site -d --name cc -p 80:80 -p 443:443 ci

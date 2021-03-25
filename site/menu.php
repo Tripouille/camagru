@@ -1,4 +1,5 @@
-<nav id="menu">        
+<nav id="menu">     
+<?php phpinfo() ?>   
     <div class="element_menu">
         <h3>Titre menu</h3>
         <ul>
