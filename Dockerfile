@@ -19,6 +19,8 @@ RUN openssl req -x509 -nodes -newkey rsa:4096 -days 365 -subj "/C=FR/ST=Lyon/L=A
 #phpmyadmin
 COPY pma/config.inc.php /etc/phpmyadmin/
 RUN mkdir /usr/share/phpmyadmin/tmp && chmod 777 /usr/share/phpmyadmin/tmp
+#PHP
+COPY php/php.ini /etc/php7/
 
 COPY start.sh /
 ENTRYPOINT ["sh", "start.sh"]
