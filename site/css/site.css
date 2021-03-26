@@ -57,3 +57,17 @@ body {
 	font-size: 2em;
 	background-color: green;
 }
+
+.error {
+	font-size: 2em;
+	color:indianred;
+	text-align: center;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	border: 2px solid black;
+}

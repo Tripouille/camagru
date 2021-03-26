@@ -1,8 +1,4 @@
-<?php
-	session_start();
-	if (isset($_SESSION['login']))
-		header("location: profil.php");
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +17,11 @@
 				<input type="submit" name ="submit" value="Connect"/>
 			</form>
 		</article>
-
+		<?php
+			if (isset($_SESSION['invalid_login']))
+				echo '<aside><p class="error"> Invalid login <p/></aside>';
+			unset($_SESSION['invalid_login']);
+		?>
 		<footer>
 
 		</footer>

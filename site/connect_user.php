@@ -1,5 +1,5 @@
 <?php
-function logUser() {
+function log_user() {
 	if (!isset($_POST['submit']) or !isset($_POST['login']) or !isset($_POST['password']))
 		return (false);
 	
@@ -16,8 +16,14 @@ function logUser() {
 }
 
 session_start();
-if (logUser())
+if (log_user())
 	header("location: profil.php");
 else
+{
+	$_SESSION['invalid_login'] = true;
 	header("location: index.php");
-?>
+}
+
+
+
+    
