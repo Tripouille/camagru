@@ -23,5 +23,5 @@ COPY mysql/pma/config.inc.php /etc/phpmyadmin/
 COPY php/php.ini /etc/php7/
 COPY php/camagru.conf /etc/php7/php-fpm.d/www.conf
 
-COPY start.sh /
+COPY scripts/start.sh /
 ENTRYPOINT ["sh", "start.sh"]

@@ -1,3 +1,9 @@
+<?php
+	session_start();
+	if (isset($_SESSION['login']))
+		header("location: profil.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -9,10 +15,10 @@
 	<body>
 		<article id="login">
 			<h1 id="logo">Camagru</h1>
-			<form>
-				<input type="text" name="id" placeholder="Login"/>
-				<input type="password" name="password"  placeholder="Password"/>
-				<input type="submit" value="Connect"/>
+			<form action="connect_user.php" method="POST">
+				<input type="text" name="login" placeholder="Login" required/>
+				<input type="password" name="password"  placeholder="Password" required/>
+				<input type="submit" name ="submit" value="Connect"/>
 			</form>
 		</article>
 
