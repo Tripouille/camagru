@@ -1,0 +1,59 @@
+@font-face {
+	font-family: Lobster;
+	src: url("fonts/Lobster.ttf");
+}
+
+body {
+	background-color: rgb(238, 238, 238);
+}
+
+#login {
+	margin: auto;
+	border: 2px solid black;
+	border-radius: 5px;
+	height: 500px;
+	width: 40%;
+	min-width: fit-content;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: rgb(255, 255, 255);
+}
+
+#logo {
+	font-size: 6em;
+	font-family: "Lobster", serif;
+	text-align: center;
+	margin-top: 0px;
+	padding: 0;
+	line-height: 2em;
+	flex: 1;
+}
+
+#login h1 {
+	margin-bottom: 0px;
+}
+
+#login form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	flex: 2;
+}
+
+#login form input {
+	background-color: rgb(238, 238, 238);
+	border-radius: 5px;
+	opacity: 50%;
+	height: 80px;
+	width: 80%;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+#login form input[type="submit"] {
+	font-size: 2em;
+	background-color: green;
+}
