@@ -29,7 +29,7 @@ $i++;
 
 /* Authentication type */
 $cfg['Servers'][$i]['user']          = 'admin';
-$cfg['Servers'][$i]['password']      = 'admin';
+$cfg['Servers'][$i]['password']      = 'admin42';
 $cfg['Servers'][$i]['auth_type']     = 'config';
 
 /* Server parameters */
@@ -45,7 +45,7 @@ $cfg['Servers'][$i]['AllowNoPassword'] = false;
  $cfg['Servers'][$i]['controlhost'] = '';
  $cfg['Servers'][$i]['controlport'] = '';
  $cfg['Servers'][$i]['controluser'] = 'admin';
- $cfg['Servers'][$i]['controlpass'] = 'admin';
+ $cfg['Servers'][$i]['controlpass'] = 'admin42';
 
 /* Storage database and tables */
  $cfg['Servers'][$i]['pmadb'] = 'phpmyadmin';

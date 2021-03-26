@@ -14,9 +14,9 @@ server {
 	ssl_certificate_key /etc/ssl/private/localhost.key;
 	ssl_protocols TLSv1.2;
 	ssl_ciphers HIGH:!aNULL:!MD5;
-	root /usr/share/webapps/;
 
-	index index index.php index.html index.htm index.nginx-debian.html;
+	root /usr/share/webapps/;
+	index index.php index.html;
 
 	location / {
 		autoindex on;
@@ -24,8 +24,7 @@ server {
 	}
 
 	location ~ \.php$ {
-		fastcgi_pass      127.0.0.1:9000;
-		fastcgi_index     index.php;
 		include           fastcgi.conf;
+		fastcgi_pass      unix:/run/php-fpm7/camagru.sock;
 	}
 }

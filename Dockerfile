@@ -17,10 +17,11 @@ COPY nginx/default /etc/nginx/http.d/default.conf
 RUN openssl req -x509 -nodes -newkey rsa:4096 -days 365 -subj "/C=FR/ST=Lyon/L=Auvergne-Rhône-Alpes/O=42/CN=www.42.fr" \
 	-keyout /etc/ssl/private/localhost.key -out /etc/ssl/certs/localhost.crt
 #phpmyadmin
-COPY pma/config.inc.php /etc/phpmyadmin/
+COPY mysql/pma/config.inc.php /etc/phpmyadmin/
 RUN mkdir /usr/share/phpmyadmin/tmp && chmod 777 /usr/share/phpmyadmin/tmp
 #PHP
 COPY php/php.ini /etc/php7/
+COPY php/camagru.conf /etc/php7/php-fpm.d/www.conf
 
 COPY start.sh /
 ENTRYPOINT ["sh", "start.sh"]
