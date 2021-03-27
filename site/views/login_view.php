@@ -1,7 +1,7 @@
 <?php ob_start(); ?>
 <article id="login">
 	<h1 id="logo">Camagru</h1>
-	<form action="connect_user.php" method="POST">
+	<form action="index.php?action=connect_user" method="POST">
 		<input type="text" name="login" placeholder="Login" required/>
 		<input type="password" name="password"  placeholder="Password" required/>
 		<input type="submit" name ="submit" value="Connect"/>
@@ -13,4 +13,4 @@ if (isset($_SESSION['invalid_login']))
 unset($_SESSION['invalid_login']);
 $content = ob_get_clean(); ?>
 
-<?php require("template.php"); ?>
+<?php require("views/template.php"); ?>
