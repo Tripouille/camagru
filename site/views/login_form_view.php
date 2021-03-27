@@ -6,11 +6,16 @@
 		<input type="password" name="password"  placeholder="Password" required/>
 		<input type="submit" name ="submit" value="Connect"/>
 	</form>
+	<form action="index.php?action=register_form">
+		<!--<a href="index.php?action=register_form">Register on Camagru</a>-->
+		<input type="submit" value="Register"/>
+	</form>
+	<?php
+		if (isset($_SESSION['invalid_login']))
+			echo '<aside class="error"><p> Invalid login <p/></aside>';
+		unset($_SESSION['invalid_login']);
+	?>
 </article>
-<?php
-if (isset($_SESSION['invalid_login']))
-	echo '<aside><p class="error"> Invalid login <p/></aside>';
-unset($_SESSION['invalid_login']);
-$content = ob_get_clean(); ?>
+<?php $content = ob_get_clean(); ?>
 
-<?php require("views/template.php"); ?>
+<?php require("views/template_unlogged.php"); ?>

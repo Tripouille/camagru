@@ -3,15 +3,22 @@
 	src: url("fonts/Lobster.ttf");
 }
 
+html, body {
+	height: 100%;
+	margin: auto;
+}
 body {
 	background-color: rgb(238, 238, 238);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 #login {
 	margin: auto;
 	border: 2px solid black;
 	border-radius: 5px;
-	height: 500px;
+	height: 800px;
 	width: 40%;
 	min-width: fit-content;
 	padding: 20px;
@@ -19,6 +26,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	background-color: rgb(255, 255, 255);
+	position: relative;
 }
 
 #logo {
@@ -55,10 +63,42 @@ body {
 
 #login form input[type="submit"] {
 	font-size: 2em;
+	background-color: lightgreen;
+}
+
+#login nav {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#login nav a {
+	font-size: 3em;
+	text-align: center;
+	color: black;
+}
+
+#login form input[value="Register"] {
+	background-color: orange;
+}
+
+#login form input[value="Register"]:hover {
+	background-color: coral;
+}
+
+#login form input[value="Connect"]:hover {
 	background-color: green;
 }
 
 .error {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 100%;
+}
+
+.error p {
 	font-size: 2em;
 	color:indianred;
 	text-align: center;

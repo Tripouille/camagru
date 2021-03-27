@@ -12,4 +12,4 @@ echo '<aside><p class="error">' . $_SESSION["invalid_register"] . '<p/></aside>'
 unset($_SESSION['invalid_register']);
 $content = ob_get_clean(); ?>
 
-<?php require("views/template.php"); ?>
+<?php require("views/template_unlogged.php"); ?>
