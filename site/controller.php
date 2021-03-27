@@ -47,8 +47,8 @@ function admin() {
 	require("views/admin_view.php");
 }
 
-function login() {
-	require("views/login_view.php");
+function login_form() {
+	require("views/login_form_view.php");
 }
 
 function profile() {
@@ -57,4 +57,8 @@ function profile() {
 
 function register_form() {
 	require("views/register_form_view.php");
+}
+
+function logout() {
+	$_SESSION = array();
 }

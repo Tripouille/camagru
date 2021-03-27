@@ -1,12 +1,12 @@
 <?php
 session_start();
 include("controller.php");
-try {
+try { //switch //header location pour connect
 	if (!isset($_GET['action']) or $_GET['action'] == 'login') {
 		if (isset($_SESSION['login']))
 			admin();
 		else
-			login();
+			login_form();
 	}
 	else if ($_GET['action'] == 'admin') {
 		admin();
@@ -16,7 +16,7 @@ try {
 			profile();
 		else {
 			$_SESSION['invalid_login'] = true;
-			login();
+			login_form();
 		}
 	}
 	else if ($_GET['action'] == 'register_form') {
@@ -24,9 +24,16 @@ try {
 	}
 	else if ($_GET['action'] == 'register_user') {
 		if (register_form_is_valid() and register_user())
-			login();
+			login_form();
 		else
 			register_form();
+	}
+	else if ($_GET['action'] == 'logout') {
+		logout();
+		login_form();
+	}
+	else if ($_GET['action'] == 'profile') {
+		profile();
 	}
 }
 catch (Exception $e) {

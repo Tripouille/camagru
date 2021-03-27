@@ -8,8 +8,5 @@
 
 	<body>
 		<?= $content ?>
-		<form action="index.php?action=logout" method="POST">
-			<input type="submit" value="Logout"/>
-		</form>
 	</body>
 </html>
