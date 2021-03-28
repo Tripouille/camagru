@@ -11,7 +11,7 @@ rc-update add nginx
 rc-update add php-fpm7
 openrc
 mysql -u root < setup.sql && rm setup.sql
-mysql -u root < phpmyadmin.sql && rm phpmyadmin.sql
+mysql -u root phpmyadmin < phpmyadmin.sql && rm phpmyadmin.sql
 
 mkdir /usr/share/webapps/phpmyadmin/tmp && chmod 777 /usr/share/webapps/phpmyadmin/tmp \
 && ln -fs /usr/share/webapps/phpmyadmin/ /usr/share/webapps/site/pma

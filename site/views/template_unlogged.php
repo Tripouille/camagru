@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<link href="css/site.css" rel="stylesheet">
+		<link href="css/template_unlogged.css" rel="stylesheet">
 		<title>Camagru</title>
 	</head>
 

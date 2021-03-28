@@ -10,23 +10,25 @@ function db_get_users() {
 
 function db_get_user($user_name) {
 	global $bdd;
-	$request = $bdd->prepare("SELECT name FROM users WHERE name = :name");
-	if (!$request->execute(["name" => $user_name]))
+	$request = $bdd->prepare("SELECT login FROM users WHERE login = :login");
+	if (!$request->execute(["login" => $user_name]))
 		throw new Exception('Cannot execute bdd request.');
 	return ($request->fetch());
 }
 
-function db_add_user($user_name, $hashed_password) {
+function db_add_user($user_name, $hashed_password, $mail) {
 	global $bdd;
-	$request = $bdd->prepare("INSERT INTO users VALUES(:name, :password)");
-	if (!$request->execute(["name" => $user_name, "password" => $hashed_password]))
+	$request = $bdd->prepare("INSERT INTO users VALUES(:login, :password, :mail)");
+	if (!$request->execute(["login" => $user_name,
+							"password" => $hashed_password,
+							"mail" => $mail]))
 		throw new Exception('Cannot execute bdd request.');
 }
 
 function db_get_password($login) {
 	global $bdd;
-	$request = $bdd->prepare("SELECT password FROM users WHERE name = :login");
-	if (!$request->execute(array("login" => $_POST['login'])))
+	$request = $bdd->prepare("SELECT password FROM users WHERE login = :login");
+	if (!$request->execute(array("login" => $login)))
 		throw new Exception('Cannot execute bdd request.');
 	return ($request->fetch());
 }

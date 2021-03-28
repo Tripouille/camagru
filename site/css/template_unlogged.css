@@ -1,0 +1,102 @@
+@font-face {
+	font-family: Lobster;
+	src: url("fonts/Lobster.ttf");
+}
+
+html, body {
+	height: 100%;
+	margin: auto;
+}
+
+body {
+	background-color: rgb(238, 238, 238);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+article {
+	margin: auto;
+	border: 2px solid black;
+	border-radius: 5px;
+	height: 800px;
+	width: 40%;
+	min-width: fit-content;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: rgb(255, 255, 255);
+	position: relative;
+}
+
+h1 {
+	font-size: 6em;
+	font-family: "Lobster", serif;
+	text-align: center;
+	margin-top: 0px;
+	padding: 0;
+	line-height: 2em;
+	flex: 1;
+	margin-bottom: 0px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	flex: 2;
+}
+
+/* Inputs */
+
+input, button {
+	border-radius: 5px;
+	opacity: 50%;
+	height: 80px;
+	width: 80%;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+input[type="text"] {
+	background-color: rgb(238, 238, 238);
+}
+
+/* Submits */
+
+input[type="submit"], button[type="submit"] {
+	font-size: 2em;
+}
+
+input[type="submit"] {
+	background-color: lightgreen;
+}
+
+input[type="submit"]:hover {
+	background-color: green;
+}
+
+button[type="submit"] {
+	background-color: orange;
+}
+
+button[type="submit"]:hover {
+	background-color: coral;
+}
+
+/* Errors */
+
+.error {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 100%;
+}
+
+.error p {
+	font-size: 2em;
+	color:indianred;
+	text-align: center;
+}

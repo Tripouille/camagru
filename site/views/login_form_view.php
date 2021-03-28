@@ -6,9 +6,8 @@
 		<input type="password" name="password"  placeholder="Password" required/>
 		<input type="submit" name ="submit" value="Connect"/>
 	</form>
-	<form action="index.php?action=register_form">
-		<!--<a href="index.php?action=register_form">Register on Camagru</a>-->
-		<input type="submit" value="Register"/>
+	<form action="index.php" method="GET">
+			<button type="submit" name="action" value="register_form">Register</button>
 	</form>
 	<?php
 		if (isset($_SESSION['invalid_login']))
