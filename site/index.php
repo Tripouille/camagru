@@ -13,10 +13,10 @@ try { //switch //header location pour connect
 	}
 	else if ($_GET['action'] == 'connect_user') {
 		if (connect_user())
-			header("location: index.php?action=profile");
+			header("location: /profile");
 		else {
 			$_SESSION['invalid_login'] = true;
-			header("location: index.php?action=login_form");
+			header("location: /");
 		}
 	}
 	else if ($_GET['action'] == 'register_form') {
@@ -24,13 +24,13 @@ try { //switch //header location pour connect
 	}
 	else if ($_GET['action'] == 'register_user') {
 		if (register_form_is_valid() and register_user())
-			header("location: index.php?action=login_form");
+			header("location: /");
 		else
-			header("location: index.php?action=register_form");
+			header("location: /register_form");
 	}
 	else if ($_GET['action'] == 'logout') {
 		logout();
-		header("location: index.php?action=login_form");
+		header("location: /");
 	}
 	else if ($_GET['action'] == 'profile') {
 		profile();

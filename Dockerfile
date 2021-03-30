@@ -14,7 +14,7 @@ COPY mysql/my.cnf /etc/
 COPY mysql/setup.sql /
 COPY mysql/phpmyadmin.sql /
 #nginx
-COPY nginx/default /etc/nginx/http.d/default.conf
+COPY nginx/default.conf /etc/nginx/http.d/
 RUN openssl req -x509 -nodes -newkey rsa:4096 -days 365 -subj "/C=FR/ST=Lyon/L=Auvergne-Rhône-Alpes/O=42/CN=www.42.fr" \
 	-keyout /etc/ssl/private/localhost.key -out /etc/ssl/certs/localhost.crt
 #phpmyadmin

@@ -1,12 +1,14 @@
 <?php ob_start(); ?>
-<article id="login">
-	<h1 id="logo">Camagru</h1>
-	<form action="index.php?action=register_user" method="POST">
-		<input type="text" name="login" placeholder="Login" required/>
-		<input type="password" name="password"  placeholder="Password" required/>
-		<input type="text" name="mail"  placeholder="Mail" required/>
-		<button type="submit">Register</button>
-	</form>
+<article>
+	<h1>Camagru</h1>
+	<section>
+		<form action="/register_user" method="POST">
+			<input type="text" name="login" placeholder="Login" required/>
+			<input type="password" name="password"  placeholder="Password" required/>
+			<input type="text" name="mail"  placeholder="Mail" required/>
+			<input type="submit" value="Register"/>
+		</form>
+	</section>
 	<?php
 		if (isset($_SESSION['invalid_register']))
 		echo '<aside class="error"><p>' . $_SESSION["invalid_register"] . '<p/></aside>';
