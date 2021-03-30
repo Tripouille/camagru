@@ -55,13 +55,13 @@ article form {
 	align-items: center;
 }
 
-section form[action="/connect_user"] {
+article form[action="/connect_user"] {
 	flex: 3;
 	margin-bottom: 5%;
 }
 
-section form[action="/register_form"],
-section form[action="/register_user"] {
+article form[action="/register_form"],
+article form[action="/register_user"] {
 	flex: 1;
 }
 

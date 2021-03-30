@@ -26,28 +26,21 @@ function register_form_is_valid() {
 	elseif (htmlspecialchars($_POST['login']) != $_POST['login'] 
 	or !filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL))
 		$_SESSION['invalid_register'] = "Invalid mail format";
+	else if (db_contain_user($_POST['login']))
+		$_SESSION['invalid_register'] = "Login already in use";
+	else if (db_contain_mail($_POST['mail']))
+		$_SESSION['invalid_register'] = "Mail already in use";
 	else
 		return (true);
 	return (false);
 }
 
 function register_user() {
-	$request_result = db_get_user($_POST['login']);
-	if ($request_result)
-	{
-		$_SESSION['invalid_register'] = "Login already in use";
-		return (false);
-	}
 	define("PEPPER", "OAJGbY7kRDogl46ku4eBGb6J4PWzn3OC");
 	$password_options = ["salt" => PEPPER . $_POST['login'] . PEPPER, "cost" => 10];
 	$hashed_password = password_hash($_POST['password'], PASSWORD_BCRYPT, $password_options);
 	db_add_user($_POST['login'], $hashed_password, $_POST['mail']);
 	return (true);
-}
-
-function admin() {
-	$request = db_get_users();
-	require("views/admin_view.php");
 }
 
 function login_form() {

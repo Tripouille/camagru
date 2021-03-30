@@ -8,9 +8,6 @@ try { //switch //header location pour connect
 		else
 			login_form();
 	}
-	else if ($_GET['action'] == 'admin') {
-		admin();
-	}
 	else if ($_GET['action'] == 'connect_user') {
 		if (connect_user())
 			header("location: /profile");
