@@ -1,5 +1,5 @@
 <?php ob_start(); ?>
-<article>
+<article id="login">
 	<h1>Camagru</h1>
 	<section>
 		<form action="/connect_user" method="POST">
@@ -11,11 +11,7 @@
 			<input type="submit" value="Register"/>
 		</form>
 	</section>
-	<?php
-		if (isset($_SESSION['invalid_login']))
-			echo '<aside class="error"><p> Invalid login <p/></aside>';
-		unset($_SESSION['invalid_login']);
-	?>
+	<?= $_SESSION['error'] ?? '' ?>
 </article>
 <?php $content = ob_get_clean(); ?>
 

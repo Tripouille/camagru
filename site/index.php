@@ -12,7 +12,7 @@ try { //switch //header location pour connect
 		if (connect_user())
 			header("location: /profile");
 		else {
-			$_SESSION['invalid_login'] = true;
+			$_SESSION['error'] = 'Invalid login';
 			header("location: /");
 		}
 	}
