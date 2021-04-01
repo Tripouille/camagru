@@ -79,3 +79,4 @@ login.addEventListener('input', checkLogin);
 password.addEventListener('input', checkPassword);
 mail.addEventListener('input', checkMail);
 registerButton.addEventListener('click', checkRegister);
+switchButton();

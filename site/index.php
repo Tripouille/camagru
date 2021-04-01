@@ -21,9 +21,15 @@ try { //switch //header location pour connect
 	}
 	else if ($_GET['action'] == 'register_user') {
 		if (register_form_is_valid() and register_user())
+		{
+			unset($_SESSION['register_form']);
 			header("location: /");
+		}
 		else
+		{
+			$_SESSION['register_form'] = $_POST;
 			header("location: /register_form");
+		}
 	}
 	else if ($_GET['action'] == 'logout') {
 		logout();
