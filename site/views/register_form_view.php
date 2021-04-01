@@ -1,6 +1,6 @@
 <?php ob_start(); ?>
 <article id="register">
-	<h1>Camagrou</h1>
+	<h1>Camagru</h1>
 	<section>
 		<form action="/register_user" method="POST">
 			<input type="text" name="login" placeholder="Login" required/>

@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<link href="css/normalize.css" rel="stylesheet">
 		<link href="css/template.css" rel="stylesheet">
 		<title>Camagru</title>
 	</head>
